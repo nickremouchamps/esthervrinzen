@@ -1,0 +1,387 @@
+/* =====================
+   Local Fonts
+   ===================== */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/fraunces-light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/fraunces-light-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/quicksand-regular.woff2') format('woff2');
+}
+
+/* =====================
+   Reset & Base
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #F9F5F1;
+  --plum:  #4F2B36;
+  --teal:  #246A73;
+  --sage:  #9BAFA1;
+  --text:  #2C2C2C;
+  /* Max content width */
+  --max-w: 1100px;
+  /* Outer gutter: centers content in --max-w column */
+  --gutter: max(6vw, calc((100vw - var(--max-w)) / 2));
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+}
+
+/* =====================
+   Award Banner
+   ===================== */
+.award-banner {
+  background: var(--sage);
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+}
+
+/* =====================
+   Hero
+   Content sits in a centered column; image is a natural-size portrait
+   ===================== */
+.hero {
+  background: var(--cream);
+}
+
+.hero-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 56px 6%;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(2.8rem, 4.5vw, 5rem);
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.hero-text .tagline {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hero-image {
+  flex: 0 0 360px;
+  max-width: 40%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================
+   About  (full-width plum band, content centered)
+   ===================== */
+.about {
+  background: var(--plum);
+}
+
+.about-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 64px 6%;
+}
+
+.about .section-heading {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--sage);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--sage);
+  display: inline-block;
+}
+
+.about p {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--cream);
+  font-size: 0.95rem;
+  max-width: 660px;
+  line-height: 1.85;
+}
+
+/* =====================
+   Book  (full-width teal | cream split)
+   The outer padding on each side = --gutter, keeping content
+   aligned with the centered hero/about column above.
+   ===================== */
+.book {
+  display: flex;
+  min-height: 480px;
+}
+
+.book-cover {
+  flex: 0 0 44%;
+  background: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 4% 56px var(--gutter);
+}
+
+.book-cover img {
+  max-height: 380px;
+  max-width: 100%;
+  width: auto;
+  display: block;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.30);
+}
+
+.book-info {
+  flex: 1;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px var(--gutter) 56px 4%;
+}
+
+.book-info h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.book-info p {
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin-bottom: 14px;
+  line-height: 1.8;
+}
+
+.book-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 28px;
+  border: 1.5px solid var(--plum);
+  color: var(--plum);
+  background: transparent;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--plum);
+  color: #fff;
+}
+
+/* =====================
+   Contact  (full-width plum 1/3 | cream 2/3)
+   ===================== */
+.contact {
+  display: flex;
+  min-height: 400px;
+}
+
+.contact-left {
+  flex: 0 0 33.333%;
+  background: var(--plum);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  padding: 60px 4% 60px var(--gutter);
+}
+
+.contact-left h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--sage);
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  color: #fff;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.social-icons a:hover { opacity: 1; }
+
+.contact-right {
+  flex: 1;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px var(--gutter) 60px 4%;
+}
+
+.contact-form { max-width: 480px; }
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group { flex: 1; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 8px 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--plum);
+}
+
+.btn-submit {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px;
+  background: var(--plum);
+  color: #fff;
+  border: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-submit:hover { opacity: 0.85; }
+
+/* =====================
+   Footer
+   ===================== */
+.footer {
+  background: var(--sage);
+  color: #fff;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    padding: 40px 6%;
+    gap: 32px;
+  }
+
+  .hero-image {
+    flex: unset;
+    max-width: 280px;
+    width: 100%;
+  }
+
+  .book { flex-direction: column; }
+
+  .book-cover {
+    flex: unset;
+    padding: 40px 12%;
+  }
+
+  .book-info { padding: 44px 6%; }
+
+  .contact { flex-direction: column; }
+
+  .contact-left {
+    flex: unset;
+    padding: 44px 6%;
+  }
+
+  .contact-right { padding: 44px 6%; }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
