@@ -18,6 +18,22 @@
 }
 
 @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/fraunces-semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/fraunces-bold.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 400;
@@ -63,12 +79,12 @@ body {
   background: var(--sage);
   color: #fff;
   text-align: center;
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 0.88rem;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
 }
 
 /* =====================
@@ -94,8 +110,8 @@ body {
 
 .hero-text h1 {
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 300;
-  font-size: clamp(2.8rem, 4.5vw, 5rem);
+  font-weight: 700;
+  font-size: clamp(3rem, 6vw, 5.375rem);
   line-height: 1.05;
   color: var(--text);
   margin-bottom: 18px;
@@ -103,8 +119,8 @@ body {
 
 .hero-text .tagline {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+  line-height: 1.4;
 }
 
 .hero-image {
@@ -133,8 +149,8 @@ body {
 
 .about .section-heading {
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 300;
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 3.125rem);
   color: var(--sage);
   margin-bottom: 20px;
   padding-bottom: 10px;
@@ -179,7 +195,7 @@ body {
 
 .book-info {
   flex: 1;
-  background: var(--cream);
+  background: var(--teal);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,10 +204,10 @@ body {
 
 .book-info h2 {
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 300;
-  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4.5vw, 4.0625rem);
   line-height: 1.1;
-  color: var(--text);
+  color: var(--cream);
   margin-bottom: 24px;
 }
 
@@ -200,6 +216,7 @@ body {
   max-width: 500px;
   margin-bottom: 14px;
   line-height: 1.8;
+  color: var(--cream);
 }
 
 .book-buttons {
@@ -211,8 +228,8 @@ body {
 .btn {
   display: inline-block;
   padding: 9px 28px;
-  border: 1.5px solid var(--plum);
-  color: var(--plum);
+  border: 1.5px solid var(--cream);
+  color: var(--cream);
   background: transparent;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -223,8 +240,8 @@ body {
 }
 
 .btn:hover {
-  background: var(--plum);
-  color: #fff;
+  background: var(--cream);
+  color: var(--teal);
 }
 
 /* =====================
@@ -272,7 +289,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px var(--gutter) 60px 4%;
+  padding: 60px var(--gutter) 60px 8%;
 }
 
 .contact-form { max-width: 480px; }
